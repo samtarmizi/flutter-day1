@@ -45,7 +45,8 @@ class _HelloWorldPageState extends State<HelloWorldPage> {
                 Text("This is my first app"),
                 Row(
                   children: <Widget>[
-                    FlatButton(
+                    Expanded(
+                        child: FlatButton(
                       child: Text("Increment"),
                       color: Colors.green,
                       textColor: Colors.white,
@@ -54,7 +55,7 @@ class _HelloWorldPageState extends State<HelloWorldPage> {
                           number++;
                         });
                       },
-                    ),
+                    )),
                     Expanded(
                       child: RaisedButton(
                           child: Text("Descrement"),
@@ -72,7 +73,8 @@ class _HelloWorldPageState extends State<HelloWorldPage> {
                             });
                           }),
                     ),
-                    OutlineButton(
+                    Expanded(
+                        child: OutlineButton(
                       child: Text("Reset"),
                       color: Colors.blue,
                       textColor: Colors.black,
@@ -81,7 +83,7 @@ class _HelloWorldPageState extends State<HelloWorldPage> {
                           number = 0;
                         });
                       },
-                    )
+                    ))
                   ],
                 )
               ])))),
