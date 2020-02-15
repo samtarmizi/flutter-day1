@@ -40,6 +40,14 @@ class _HelloWorldPageState extends State<HelloWorldPage> {
             children: <Widget>[
               Text("Welcome to MyApp"),
               Text("This is my first app"),
+              FlatButton(
+                child: Text("Press Me"),
+                color: Colors.green,
+                textColor: Colors.white,
+                onPressed: () => {
+                  
+                },
+              )
             ]
           )
         )
