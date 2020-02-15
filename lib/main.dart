@@ -55,22 +55,22 @@ class _HelloWorldPageState extends State<HelloWorldPage> {
                         });
                       },
                     ),
-                    RaisedButton(
-                      child: Text("Descrement"),
-                      color: Colors.blue,
-                      textColor: Colors.black,
-                      onPressed: () {
-                        setState(() {
-
-                          if(number == 0){
-                            Toast.show("Number cannot be zero", context, duration: Toast.LENGTH_SHORT, gravity:  Toast.BOTTOM);
-                          }
-                          else{
-                            number--;
-                          }
-                          
-                        });
-                      },
+                    Expanded(
+                      child: RaisedButton(
+                          child: Text("Descrement"),
+                          color: Colors.blue,
+                          textColor: Colors.black,
+                          onPressed: () {
+                            setState(() {
+                              if (number == 0) {
+                                Toast.show("Number cannot be zero", context,
+                                    duration: Toast.LENGTH_SHORT,
+                                    gravity: Toast.BOTTOM);
+                              } else {
+                                number--;
+                              }
+                            });
+                          }),
                     ),
                     OutlineButton(
                       child: Text("Reset"),
