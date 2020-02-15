@@ -42,15 +42,39 @@ class _HelloWorldPageState extends State<HelloWorldPage> {
                 SizedBox(height: 8.0),
                 Text("The number is $number"),
                 Text("This is my first app"),
-                FlatButton(
-                  child: Text("Press Me"),
-                  color: Colors.green,
-                  textColor: Colors.white,
-                  onPressed: () {
-                    setState((){
-                      number++;
-                    });
-                  },
+                Row(
+                  children: <Widget>[
+                    FlatButton(
+                      child: Text("Increment"),
+                      color: Colors.green,
+                      textColor: Colors.white,
+                      onPressed: () {
+                        setState(() {
+                          number++;
+                        });
+                      },
+                    ),
+                    RaisedButton(
+                      child: Text("Descrement"),
+                      color: Colors.blue,
+                      textColor: Colors.black,
+                      onPressed: () {
+                        setState(() {
+                          number--;
+                        });
+                      },
+                    ),
+                    OutlineButton(
+                      child: Text("Reset"),
+                      color: Colors.blue,
+                      textColor: Colors.black,
+                      onPressed: () {
+                        setState(() {
+                          number = 0;
+                        });
+                      },
+                    )
+                  ],
                 )
               ])))),
     );
