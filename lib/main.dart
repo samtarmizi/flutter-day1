@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toast/toast.dart';
 
 void main() => runApp(MyApp());
 
@@ -60,7 +61,14 @@ class _HelloWorldPageState extends State<HelloWorldPage> {
                       textColor: Colors.black,
                       onPressed: () {
                         setState(() {
-                          number--;
+
+                          if(number == 0){
+                            Toast.show("Number cannot be zero", context, duration: Toast.LENGTH_SHORT, gravity:  Toast.BOTTOM);
+                          }
+                          else{
+                            number--;
+                          }
+                          
                         });
                       },
                     ),
