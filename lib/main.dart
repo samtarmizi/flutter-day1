@@ -35,6 +35,7 @@ class _HelloWorldPageState extends State<HelloWorldPage> {
               child: Center(
                   child: Column(children: <Widget>[
                 Text("Welcome to MyApp", style: TextStyle(fontSize: 32)),
+                SizedBox(height: 8),
                 Text("This is my first app"),
                 FlatButton(
                   child: Text("Press Me"),
