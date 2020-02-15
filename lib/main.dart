@@ -38,14 +38,14 @@ class _HelloWorldPageState extends State<HelloWorldPage> {
           padding: const EdgeInsets.all(8.0),
           child:Column(
             children: <Widget>[
-              Text("Welcome to MyApp"),
+              Text("Welcome to MyApp", style: TextStyle(fontSize: 32)),
               Text("This is my first app"),
               FlatButton(
                 child: Text("Press Me"),
                 color: Colors.green,
                 textColor: Colors.white,
                 onPressed: () => {
-                  
+
                 },
               )
             ]
