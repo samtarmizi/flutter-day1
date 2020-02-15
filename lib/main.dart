@@ -36,6 +36,8 @@ class _HelloWorldPageState extends State<HelloWorldPage> {
                   child: Column(children: <Widget>[
                 Text("Welcome to MyApp", style: TextStyle(fontSize: 32)),
                 SizedBox(height: 8),
+                Image.asset("assets/images/test.jpg"),
+                SizedBox(height: 8.0),
                 Text("This is my first app"),
                 FlatButton(
                   child: Text("Press Me"),
