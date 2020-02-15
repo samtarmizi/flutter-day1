@@ -22,6 +22,8 @@ class HelloWorldPage extends StatefulWidget {
 }
 
 class _HelloWorldPageState extends State<HelloWorldPage> {
+  int number = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,12 +40,17 @@ class _HelloWorldPageState extends State<HelloWorldPage> {
                 SizedBox(height: 8),
                 Image.asset("assets/images/test.jpg"),
                 SizedBox(height: 8.0),
+                Text("The number is $number"),
                 Text("This is my first app"),
                 FlatButton(
                   child: Text("Press Me"),
                   color: Colors.green,
                   textColor: Colors.white,
-                  onPressed: () => {},
+                  onPressed: () {
+                    setState((){
+                      number++;
+                    });
+                  },
                 )
               ])))),
     );
